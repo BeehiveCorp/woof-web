@@ -1,4 +1,5 @@
-@import './variables.scss';
+@import './variables.module.scss';
+@import './functions.scss';
 
 :root {
   font-synthesis: none;
@@ -20,6 +21,10 @@ body {
   color: $light-0;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   color: $light-1;
   font-family: $main;
@@ -29,4 +34,20 @@ a {
 
 a:hover {
   color: $light-0;
+}
+
+.container {
+  margin: 0 2rem;
+  max-width: 1200px;
+  // border: 1px dashed red;
+
+  @media (min-width: calc(1200px + 2rem)) {
+    margin: 0 auto;
+  }
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,36 @@
+@import '../../assets/scss/variables.module.scss';
+
+.btn {
+  background: transparent;
+  font-family: $sub;
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: $light-0;
+  font-weight: 500;
+  transition: 0.3s;
+  border: 1px solid $primary;
+
+  &:hover {
+    border-color: $secondary;
+  }
+}
+
+.btn.isSolid {
+  background-color: $primary;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.btn.isInactive {
+  background-color: $dark-2;
+  border-color: $dark-2;
+
+  &:hover {
+    background-color: $dark-2;
+  }
+}

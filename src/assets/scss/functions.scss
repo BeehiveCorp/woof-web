@@ -1,0 +1,9 @@
+@mixin flex($x: true, $y: true) {
+  display: flex;
+  @if $x {
+    justify-content: center;
+  }
+  @if $y {
+    align-items: center;
+  }
+}

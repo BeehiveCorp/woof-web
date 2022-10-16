@@ -17,3 +17,16 @@ $sub: 'Ubuntu';
 // metrics
 $title: 48px;
 $subtitle: 24px;
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+
+  dark3: $dark-3;
+  dark2: $dark-2;
+  dark1: $dark-1;
+  dark0: $dark-0;
+
+  light1: $light-1;
+  light0: $light-0;
+}
