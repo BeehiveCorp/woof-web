@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main;
+  background: $dark-1;
+  color: $light-0;
+}
+
+a {
+  color: $light-1;
+  font-family: $main;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: $light-0;
+}
