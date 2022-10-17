@@ -7,6 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-size: 60%;
 }
 
 * {
@@ -15,10 +16,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $main;
   background: $dark-1;
   color: $light-0;
+
+  overflow-x: hidden !important;
 }
 
 ul {

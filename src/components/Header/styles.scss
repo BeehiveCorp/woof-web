@@ -2,8 +2,13 @@
 @import '../../assets/scss/variables.module.scss';
 
 .header {
+  width: 100%;
+  position: fixed;
   height: 100px;
   @include flex(false, true);
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+  backdrop-filter: blur(20px);
 
   .header__container {
     @include flex(false, true);
@@ -23,6 +28,10 @@
         gap: 20px;
       }
 
+      ul li a {
+        font-size: 1.6rem;
+      }
+
       &__buttons {
         gap: 20px;
         @include flex(true, true);
@@ -38,5 +47,11 @@
         }
       }
     }
+  }
+
+  &.active {
+    transition: 0.3s;
+    background: rgba($dark-0, 0.4);
+    backdrop-filter: blur(20px);
   }
 }

@@ -1,6 +1,9 @@
 @import '../../assets/scss/variables.module.scss';
+@import '../../assets/scss/functions.scss';
 
 .btn {
+  @include flex();
+  gap: 1.6rem;
   background: transparent;
   font-family: $sub;
   text-transform: uppercase;
@@ -15,6 +18,13 @@
 
   &:hover {
     border-color: $secondary;
+  }
+
+  .icon-container {
+    transition: 0.3s;
+    @include flex();
+    border-radius: 8px;
+    padding: 2px;
   }
 }
 

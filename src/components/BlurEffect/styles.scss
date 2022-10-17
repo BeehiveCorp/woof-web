@@ -1,0 +1,12 @@
+@import '../../assets/scss/variables.module.scss';
+
+.blur {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: $primary;
+  z-index: -1;
+  filter: blur(260px) saturate(180%);
+  opacity: 1;
+}
