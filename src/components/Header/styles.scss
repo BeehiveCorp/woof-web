@@ -6,9 +6,7 @@
   position: fixed;
   height: 100px;
   @include flex(false, true);
-  transition: 0.3s ease-in-out;
   z-index: 100;
-  backdrop-filter: blur(20px);
 
   .header__container {
     @include flex(false, true);
@@ -23,34 +21,75 @@
       @include flex(true, true);
       gap: 64px;
 
-      ul li {
+      &__links {
         @include flex(true, true);
         gap: 20px;
-      }
 
-      ul li a {
-        font-size: 1.6rem;
+        li a {
+          font-size: 1.6rem;
+        }
+
+        #toggle-menu-close {
+          display: none;
+          color: $primary;
+          cursor: pointer;
+        }
       }
 
       &__buttons {
         gap: 20px;
         @include flex(true, true);
 
-        #toggle-menu {
+        #toggle-menu-open {
+          display: none;
           color: $primary;
           cursor: pointer;
           transition: 0.3s;
         }
 
-        #toggle-menu:hover {
+        #toggle-menu-open:hover {
           color: $secondary;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        &__links {
+          position: absolute;
+          left: 0;
+          top: -100vh;
+          width: 100%;
+          height: 100vh;
+          background: rgba($dark-0, 0.96);
+          flex-direction: column;
+          gap: 48px;
+          transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+          &.active {
+            top: 0;
+          }
+
+          #toggle-menu-close {
+            display: block;
+          }
+
+          li a {
+            text-transform: uppercase;
+            font-size: 3.2rem;
+          }
+        }
+
+        &__buttons {
+          #toggle-menu-open {
+            display: block;
+          }
         }
       }
     }
   }
 
   &.active {
-    transition: 0.3s;
     background: rgba($dark-0, 0.4);
     backdrop-filter: blur(20px);
   }

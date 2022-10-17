@@ -5,9 +5,9 @@
   height: 100vh;
 
   &__container {
+    @include flex();
     padding-top: 8%;
     height: 100%;
-    @include flex();
     flex-direction: column;
     gap: 20px;
 
@@ -26,7 +26,7 @@
     p {
       font-weight: 300;
       max-width: 900px;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       text-align: center;
       color: $light-1;
       opacity: 0.6;
@@ -38,6 +38,30 @@
       flex-direction: column;
       margin-top: 40px;
       animation: scrollDownAnimation 3s infinite;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        max-width: 620px;
+        font-size: 4rem;
+        line-height: calc(4rem * 1);
+      }
+      p {
+        max-width: 620px;
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 414px) {
+      h2 {
+        max-width: 100%;
+        font-size: 3.2rem;
+        line-height: calc(3.2rem * 1);
+      }
+      p {
+        max-width: 100%;
+        font-size: 1.2rem;
+      }
     }
   }
 }

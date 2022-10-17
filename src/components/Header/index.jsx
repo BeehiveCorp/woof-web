@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BiMenuAltRight } from 'react-icons/bi';
+import { BiMenuAltRight, BiX } from 'react-icons/bi';
 
 import Button from '../Button';
 
@@ -8,6 +8,7 @@ import './styles.scss';
 
 const Header = () => {
   const [isHeaderActive, setHeaderActive] = useState(false);
+  const [isMenuLinksVisible, setMenuLinksVisible] = useState(false);
 
   useEffect(() => {
     window.removeEventListener('scroll', handleActiveHeader);
@@ -21,6 +22,10 @@ const Header = () => {
     } else setHeaderActive(false);
   };
 
+  const handleToggleMenuLinks = () => {
+    setMenuLinksVisible(!isMenuLinksVisible);
+  };
+
   return (
     <header className={`header ${isHeaderActive ? 'active' : ''}`}>
       <div className="header__container container">
@@ -29,18 +34,29 @@ const Header = () => {
         </div>
 
         <div className="menu">
-          <ul>
+          <ul className={`menu__links ${isMenuLinksVisible ? 'active' : ''}`}>
             <li>
               <a href="#">IoT</a>
+            </li>
+            <li>
               <a href="#">O que é?</a>
+            </li>
+            <li>
               <a href="#">Dispositivos</a>
+            </li>
+            <li>
               <a href="#">Contato</a>
             </li>
+            <BiX id="toggle-menu-close" onClick={handleToggleMenuLinks} size={32} />
           </ul>
 
           <div className="menu__buttons">
             <Button onPress={() => alert('not working yet 🚧')} text="Entrar" />
-            <BiMenuAltRight id="toggle-menu" size={32} />
+            <BiMenuAltRight
+              onClick={handleToggleMenuLinks}
+              id="toggle-menu-open"
+              size={32}
+            />
           </div>
         </div>
       </div>
