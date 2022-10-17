@@ -30,6 +30,8 @@
         }
 
         #toggle-menu-close {
+          position: absolute;
+          bottom: 10%;
           display: none;
           color: $primary;
           cursor: pointer;
