@@ -27,6 +27,7 @@ body {
   color: $light-0;
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 200px;
 }
 
 ul {
@@ -54,8 +55,6 @@ a:hover {
   }
 }
 
-.d-flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.highlight {
+  color: $primary;
 }

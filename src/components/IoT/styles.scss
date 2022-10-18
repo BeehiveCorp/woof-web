@@ -3,4 +3,69 @@
 
 .iot {
   margin-top: 120px;
+
+  .explanation {
+    max-width: 50%;
+    margin-bottom: 80px;
+
+    p {
+      font-size: 2.4rem;
+      color: $light-1;
+      line-height: 3.6rem;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      text-align: justify;
+    }
+
+    @media (max-width: 414px) {
+      p {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .cards {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: $dark-2;
+      flex: 1;
+      padding: 40px;
+      min-width: 320px;
+      transition: 0.3s;
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+
+        span {
+          margin-top: 8px;
+          display: block;
+          font-size: 2.4rem;
+          font-family: $sub;
+          color: $primary;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.04);
+      }
+
+      p {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        color: $light-0;
+        font-weight: 300;
+      }
+    }
+  }
 }

@@ -10,7 +10,8 @@ const Hero = ({ iotRef }) => {
     <section className="hero">
       <div className="hero__container container">
         <h2>
-          Cuide da saúde do seu pet com a <span>tecnologia</span>!
+          Cuide da saúde do seu pet com a{' '}
+          <span className="highlight">tecnologia</span>!
         </h2>
         <p>
           Faz muitas viagens e sempre precisa deixar seu pet com alguém? Com nossos
