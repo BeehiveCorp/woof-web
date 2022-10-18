@@ -5,6 +5,7 @@ import {
   BiUserVoice,
   BiMobileAlt,
   BiCalendar,
+  BiLinkExternal,
 } from 'react-icons/bi';
 
 import Title from '../Title';
@@ -12,6 +13,7 @@ import Title from '../Title';
 import variables from '../../assets/scss/variables.module.scss';
 
 import './styles.scss';
+import { rgba } from 'polished';
 
 const IoT = () => {
   const Card = ({ icon, topic, description }) => {
@@ -35,10 +37,26 @@ const IoT = () => {
           <div className="title">Afinal, como a IoT melhora a vida do meu pet?</div>
           <p className="description">
             Com os produtos Woof! você tem comando de quase tudo relacionado à{' '}
-            <span className="highlight">saúde</span>,{' '}
-            <span className="highlight">bem-estar</span> e{' '}
-            <span className="highlight">segurança</span> do seu pet, desde o controle
-            de sua alimentação até seu sono e necessidade de vacinas.{' '}
+            <span style={{ color: variables.light0, textDecoration: 'underline' }}>
+              dieta
+            </span>
+            ,{' '}
+            <span style={{ color: variables.light0, textDecoration: 'underline' }}>
+              conforto
+            </span>
+            ,{' '}
+            <span style={{ color: variables.light0, textDecoration: 'underline' }}>
+              segurança
+            </span>
+            ,{' '}
+            <span style={{ color: variables.light0, textDecoration: 'underline' }}>
+              saúde
+            </span>
+            , e{' '}
+            <span style={{ color: variables.light0, textDecoration: 'underline' }}>
+              higiene
+            </span>{' '}
+            do seu pet.
           </p>
 
           <div className="cards">
@@ -78,19 +96,59 @@ const IoT = () => {
         <div className="floating">
           <div className="sub-products">
             <div className="sub-products__sub-product">
-              <p>Woof! Diet</p>
+              <p
+                style={{
+                  color: variables.woofDiet,
+                  background: rgba(variables.woofDiet, 0.03),
+                }}
+              >
+                Woof! Diet
+                <BiLinkExternal />
+              </p>
             </div>
             <div className="sub-products__sub-product">
-              <p>Woof! Rest</p>
+              <p
+                style={{
+                  color: variables.woofRest,
+                  background: rgba(variables.woofRest, 0.03),
+                }}
+              >
+                Woof! Rest
+                <BiLinkExternal />
+              </p>
             </div>
             <div className="sub-products__sub-product">
-              <p>Woof! Security</p>
+              <p
+                style={{
+                  color: variables.woofSecurity,
+                  background: rgba(variables.woofSecurity, 0.03),
+                }}
+              >
+                Woof! Security
+                <BiLinkExternal />
+              </p>
             </div>
             <div className="sub-products__sub-product">
-              <p>Woof! Health</p>
+              <p
+                style={{
+                  color: variables.woofHealth,
+                  background: rgba(variables.woofHealth, 0.03),
+                }}
+              >
+                Woof! Health
+                <BiLinkExternal />
+              </p>
             </div>
             <div className="sub-products__sub-product">
-              <p>Woof! Hygiene</p>
+              <p
+                style={{
+                  color: variables.woofHygiene,
+                  background: rgba(variables.woofHygiene, 0.03),
+                }}
+              >
+                Woof! Hygiene
+                <BiLinkExternal />
+              </p>
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ function App() {
       <BlurEffect customStyle={{ left: -100, top: 500 }} />
       <BlurEffect customStyle={{ right: -100, top: -100 }} />
       <BlurEffect
-        customStyle={{ right: -200, top: 2400, width: 400, filter: 'blur(340px)' }}
+        customStyle={{ left: -200, top: 2400, width: 400, filter: 'blur(340px)' }}
       />
     </>
   );

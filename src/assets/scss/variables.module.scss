@@ -10,6 +10,12 @@ $dark-0: #000000;
 $light-1: #bebebe;
 $light-0: #ffffff;
 
+$woof-diet: #fff940;
+$woof-rest: #4089ff;
+$woof-security: #40ff76;
+$woof-health: #ff4040;
+$woof-hygiene: #ff9640;
+
 // typography
 $main: 'Montserrat';
 $sub: 'Ubuntu';
@@ -29,4 +35,10 @@ $subtitle: 24px;
 
   light1: $light-1;
   light0: $light-0;
+
+  woofDiet: $woof-diet;
+  woofRest: $woof-rest;
+  woofSecurity: $woof-security;
+  woofHealth: $woof-health;
+  woofHygiene: $woof-hygiene;
 }
