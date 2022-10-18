@@ -1,0 +1,43 @@
+@import '../../assets/scss/variables.module.scss';
+@import '../../assets/scss/functions.scss';
+
+.contact {
+  margin-top: 160px;
+  position: relative;
+
+  &__container {
+    @include flex();
+
+    form {
+      width: min-content;
+
+      .field:focus-within::after {
+        width: 2px;
+        height: calc(100% - 3.2rem);
+        top: calc(3.2rem / 2);
+        left: -2px;
+        border-radius: 2px;
+        content: '';
+        background: $primary;
+        position: absolute;
+      }
+
+      .field div {
+        outline: 1px solid $dark-3;
+        width: 480px;
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 564px) {
+      form {
+        width: 100%;
+
+        .field div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
