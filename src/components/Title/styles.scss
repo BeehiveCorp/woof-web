@@ -1,0 +1,37 @@
+@import '../../assets/scss/variables.module.scss';
+
+.sectionTitle {
+  margin-bottom: 80px;
+
+  span {
+    font-family: $main;
+    font-size: 2.4rem;
+    color: $primary;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  h3 {
+    font-family: $sub;
+    font-size: 4.8rem;
+    color: $light-0;
+    font-weight: 500;
+    margin-bottom: 16px;
+    transition: 0.3s;
+  }
+
+  span,
+  h3 {
+    display: block;
+    text-align: center;
+  }
+
+  @media (max-width: 414px) {
+    span {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 3.2rem;
+    }
+  }
+}
