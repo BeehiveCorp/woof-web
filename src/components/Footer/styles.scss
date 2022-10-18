@@ -1,0 +1,114 @@
+@import '../../assets/scss/variables.module.scss';
+@import '../../assets/scss/functions.scss';
+
+.footer {
+  margin-top: 160px;
+  padding: 80px 0;
+  background-color: $dark-0;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+
+    .logo-container {
+      flex: 1;
+
+      img {
+        max-width: 100px;
+      }
+    }
+
+    .content {
+      @include flex(_, false);
+      gap: 80px;
+
+      .footer-column {
+        @include flex(false, false);
+        flex-direction: column;
+
+        h4 {
+          font-size: 3.6rem;
+          font-weight: 600;
+          color: $light-0;
+          font-family: $main;
+          margin-bottom: 24px;
+        }
+
+        ul li {
+          font-size: 2rem;
+          color: $light-1;
+          max-width: 380px;
+
+          & + li {
+            margin-top: 8px;
+          }
+        }
+
+        p {
+          font-size: 2rem;
+          color: $light-1;
+          margin-bottom: 24px;
+          max-width: 380px;
+          text-align: justify;
+        }
+
+        .social-icons {
+          @include flex(false);
+          gap: 24px;
+
+          svg {
+            width: 24px;
+            height: auto;
+            color: $primary;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 816px) {
+      flex-direction: column;
+
+      .logo-container img {
+        max-width: 60px;
+      }
+    }
+
+    @media (max-width: 668px) {
+      .content {
+        flex-wrap: wrap;
+      }
+
+      .logo-container {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 414px) {
+      flex-direction: column-reverse;
+
+      .content {
+        gap: 80px;
+        flex-direction: column;
+        text-align: center;
+
+        .footer-column p {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 414px) {
+    padding: 40px 0;
+  }
+}

@@ -8,6 +8,8 @@ import Woof from './components/Woof';
 import Devices from './components/Devices';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
+import Faq from './components/Faq';
+import Footer from './components/Footer';
 
 import BlurEffect from './components/BlurEffect';
 
@@ -24,6 +26,8 @@ function App() {
       <Devices />
       <Pricing />
       <Contact />
+      <Faq />
+      <Footer />
 
       <BlurEffect customStyle={{ left: -100, top: 500 }} />
       <BlurEffect customStyle={{ right: -100, top: -100 }} />
