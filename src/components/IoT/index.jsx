@@ -21,9 +21,9 @@ const IoT = ({ iotRef }) => {
 
   return (
     <section ref={iotRef} className="iot">
-      <div className="iot__container container">
-        <Title text="IoT" subtext="Internet of Things" />
+      <Title text="IoT" subtext="Internet of Things" />
 
+      <div className="iot__container container">
         <div className="explanation">
           <p>
             Internet of Things (ou Internet das Coisas) é uma tecnologia que permite

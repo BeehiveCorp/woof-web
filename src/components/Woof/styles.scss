@@ -1,0 +1,100 @@
+@import '../../assets/scss/variables.module.scss';
+@import '../../assets/scss/functions.scss';
+
+.woof {
+  margin-top: 160px;
+
+  &__container {
+    display: flex;
+    gap: 60px;
+
+    .content {
+      flex: 1;
+
+      .title {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 4.8rem;
+        color: $light-0;
+        margin-bottom: 40px;
+      }
+
+      .description {
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        color: $light-1;
+        margin-bottom: 64px;
+      }
+
+      .cards {
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        column-gap: 40px;
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          border-radius: 8px;
+          transition: 0.3s;
+
+          &__header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+
+            span {
+              margin-top: 16px;
+              display: block;
+              font-size: 2.4rem;
+              font-family: $sub;
+              color: $light-0;
+            }
+          }
+
+          p {
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: $light-1;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .floating {
+      position: relative;
+      flex: 1;
+
+      .sub-products {
+        position: sticky;
+        top: 132px;
+        left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+        column-gap: 24px;
+
+        &__sub-product {
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232A2A2AFF' stroke-width='2' stroke-dasharray='12%2c 12' stroke-dashoffset='16' stroke-linecap='square'/%3e%3c/svg%3e");
+          padding: 24px;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%234F4F4FFF' stroke-width='2' stroke-dasharray='12%2c 12' stroke-dashoffset='16' stroke-linecap='square'/%3e%3c/svg%3e");
+          }
+
+          p {
+            font-family: $sub;
+            font-size: 3.2rem;
+            color: $light-1;
+          }
+        }
+      }
+    }
+  }
+}
