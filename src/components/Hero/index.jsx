@@ -3,6 +3,7 @@ import { BiMouse, BiDownArrowAlt } from 'react-icons/bi';
 import Button from '../Button';
 
 import variables from '../../assets/scss/variables.module.scss';
+
 import './styles.scss';
 
 const Hero = ({ iotRef }) => {

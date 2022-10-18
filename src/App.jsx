@@ -6,6 +6,7 @@ import Partners from './components/Partners';
 import IoT from './components/IoT';
 import Woof from './components/Woof';
 import Devices from './components/Devices';
+import Pricing from './components/Pricing';
 
 import BlurEffect from './components/BlurEffect';
 
@@ -20,6 +21,7 @@ function App() {
       <IoT iotRef={iotRef} />
       <Woof />
       <Devices />
+      <Pricing />
 
       <BlurEffect customStyle={{ left: -100, top: 500 }} />
       <BlurEffect customStyle={{ right: -100, top: -100 }} />
