@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import IoT from './components/IoT';
+import Partners from './components/Partners';
 
 import BlurEffect from './components/BlurEffect';
 
@@ -13,6 +14,7 @@ function App() {
     <>
       <Header />
       <Hero iotRef={iotRef} />
+      <Partners />
       <IoT iotRef={iotRef} />
 
       <BlurEffect customStyle={{ left: -100, top: 500 }} />
