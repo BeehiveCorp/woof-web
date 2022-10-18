@@ -34,12 +34,12 @@ const Partners = () => {
             },
             414: {
               spaceBetween: '-20%',
-              slidesPerView: 2.2,
+              slidesPerView: 1.8,
             },
 
             0: {
               spaceBetween: '-20%',
-              slidesPerView: 1.5,
+              slidesPerView: 1.8,
             },
           }}
         >
