@@ -3,4 +3,55 @@
 
 .devices {
   margin-top: 160px;
+
+  &__container {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+    display: flex;
+    gap: 80px;
+
+    .carousel {
+      flex: 2;
+      min-width: 0;
+      color: black;
+
+      .swiper {
+        padding-left: 2rem;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      flex: 1;
+      p {
+        color: $light-1;
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        max-width: 480px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .carousel,
+      .content {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 564px) {
+      flex-direction: column;
+      margin-right: 0 !important;
+      gap: 40px;
+
+      .content {
+        margin: 0 2rem;
+      }
+    }
+  }
 }
