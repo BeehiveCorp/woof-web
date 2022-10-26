@@ -1,9 +1,13 @@
+import { useState, useEffect } from 'react';
+
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 
 import { BiChevronDown } from 'react-icons/bi';
+
+import api from '../../services/api';
 
 import Title from '../Title';
 
@@ -12,6 +16,15 @@ import variables from '../../assets/scss/variables.module.scss';
 import './styles.scss';
 
 const Faq = () => {
+  const [faqs, setFaqs] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await api.get('/');
+      setFaqs(data);
+    })();
+  }, []);
+
   const MyAccordion = ({ question, answer }) => {
     return (
       <Accordion className="accordion">
@@ -49,22 +62,13 @@ const Faq = () => {
     <section className="faq">
       <Title text="Perguntas frequentes" subtext="FAQ" />
       <div className="faq__container container">
-        <MyAccordion
-          question="Como o kit é instalado?"
-          answer="Durante a compra de seu pacote, caso faça a escolha pela instalação profissional, você poderá agendar a visita de um especialista.z"
-        />
-        <MyAccordion
-          question="Tenho mais de um pet, o produto é para mim?"
-          answer="Ao se aproximar do comedor, você receberá um alerta e poderá ver qual dos seus pets que se encontra ali, podendo então, liberar ou não a comidinha. Lembrando que cada pet tem um comportamento ao se alimentar, então, recomendamos testar para ver se essa solução será viável para você e seus pets."
-        />
-        <MyAccordion
-          question="Posso adquirir novas funcionalidades ao meu plano?"
-          answer="Claro, você pode começar com apenas uma solução!"
-        />
-        <MyAccordion
-          question="Meu pet precisa de algum tipo de treinamento?"
-          answer="Não."
-        />
+        {faqs.map((faq) => (
+          <MyAccordion
+            key={faq.question}
+            question={faq.question}
+            answer={faq.answer}
+          />
+        ))}
       </div>
     </section>
   );
